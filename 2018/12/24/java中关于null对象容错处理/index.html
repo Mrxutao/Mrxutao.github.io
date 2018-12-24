@@ -3,23 +3,23 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>你的名称 | MrXutao Hello Word</title>
+  <title>java中关于null对象容错处理 | MrXutao Hello Word</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
   
-  <meta name="description" content="在秋日里，小遇时光:        既然时间是不可逆的，它总是无法被追回。 面对自己匆匆又庸碌的上半年，除去唏嘘抱憾不已，且紧紧抓住下半年这最后的一点时光，去勇敢的做点什么吧。那些你平日渴望又害怕的，叫醒你打盹很久的梦想，弥补这颗粒无收的逝年。 人世间唯一公平的东西，怕就是这捧任性又可人的时间了。在时间面前，没有等级，没有贫贱，没有欺凌。 逝去莫可追，将来不可见。 追逐时间长河的唯一方式，就是紧紧">
+  <meta name="description" content="在 Thinking in Java 看到这样一段话： Primitives that are fields in a class are automatically initialized to zero, as noted in the Everything Is an Object chapter. But the object references are initialized to n">
 <meta property="og:type" content="article">
-<meta property="og:title" content="你的名称">
-<meta property="og:url" content="https://Mrxutao.github.io/2018/12/23/你的名称/index.html">
+<meta property="og:title" content="java中关于null对象容错处理">
+<meta property="og:url" content="https://Mrxutao.github.io/2018/12/24/java中关于null对象容错处理/index.html">
 <meta property="og:site_name" content="MrXutao Hello Word">
-<meta property="og:description" content="在秋日里，小遇时光:        既然时间是不可逆的，它总是无法被追回。 面对自己匆匆又庸碌的上半年，除去唏嘘抱憾不已，且紧紧抓住下半年这最后的一点时光，去勇敢的做点什么吧。那些你平日渴望又害怕的，叫醒你打盹很久的梦想，弥补这颗粒无收的逝年。 人世间唯一公平的东西，怕就是这捧任性又可人的时间了。在时间面前，没有等级，没有贫贱，没有欺凌。 逝去莫可追，将来不可见。 追逐时间长河的唯一方式，就是紧紧">
+<meta property="og:description" content="在 Thinking in Java 看到这样一段话： Primitives that are fields in a class are automatically initialized to zero, as noted in the Everything Is an Object chapter. But the object references are initialized to n">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-23T13:10:30.537Z">
+<meta property="og:updated_time" content="2018-12-24T15:16:29.372Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="你的名称">
-<meta name="twitter:description" content="在秋日里，小遇时光:        既然时间是不可逆的，它总是无法被追回。 面对自己匆匆又庸碌的上半年，除去唏嘘抱憾不已，且紧紧抓住下半年这最后的一点时光，去勇敢的做点什么吧。那些你平日渴望又害怕的，叫醒你打盹很久的梦想，弥补这颗粒无收的逝年。 人世间唯一公平的东西，怕就是这捧任性又可人的时间了。在时间面前，没有等级，没有贫贱，没有欺凌。 逝去莫可追，将来不可见。 追逐时间长河的唯一方式，就是紧紧">
+<meta name="twitter:title" content="java中关于null对象容错处理">
+<meta name="twitter:description" content="在 Thinking in Java 看到这样一段话： Primitives that are fields in a class are automatically initialized to zero, as noted in the Everything Is an Object chapter. But the object references are initialized to n">
   
     <link rel="alternate" href="/atom.xml" title="MrXutao Hello Word" type="application/atom+xml">
   
@@ -158,7 +158,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-你的名称" style="width: 75%; float:left;" class="article article-type-post" itemscope="" itemprop="blogPost">
+          <section id="main" style="float:none;"><article id="post-java中关于null对象容错处理" style="width: 75%; float:left;" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div id="articleInner" class="article-inner">
     
     
@@ -166,7 +166,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      你的名称
+      java中关于null对象容错处理
     </h1>
   
 
@@ -174,8 +174,8 @@
     
     <div class="article-meta">
       
-	<a href="/2018/12/23/你的名称/" class="article-date">
-	  <time datetime="2018-12-23T13:00:22.000Z" itemprop="datePublished">2018-12-23</time>
+	<a href="/2018/12/24/java中关于null对象容错处理/" class="article-date">
+	  <time datetime="2018-12-24T15:16:22.000Z" itemprop="datePublished">2018-12-24</time>
 	</a>
 
       
@@ -191,31 +191,49 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在秋日里，小遇时光:<br>        既然时间是不可逆的，它总是无法被追回。</p>
-<p>面对自己匆匆又庸碌的上半年，除去唏嘘抱憾不已，且紧紧抓住下半年这最后的一点时光，去勇敢的做点什么吧。那些你平日渴望又害怕的，叫醒你打盹很久的梦想，弥补这颗粒无收的逝年。</p>
-<p>人世间唯一公平的东西，怕就是这捧任性又可人的时间了。在时间面前，没有等级，没有贫贱，没有欺凌。</p>
-<p>逝去莫可追，将来不可见。</p>
-<p>追逐时间长河的唯一方式，就是紧紧抓住现在，现在的她，每一分每一秒。</p>
-<p>那满目的苍苍白发和深深皱纹，只是时间的倒影。</p>
-<p>深藏的满腹诗书和高屋建瓴，才是时间的梳妆。倘若远远望去，这双眼流转的沉甸甸的睿智，这柔软心灵涤荡的如水般的善意，恍若时间撩起的最优雅的发髻，欢愉在裙角飞扬里。</p>
-<p>时光流走在指缝间，也静卧在柔软的心里。</p>
-<p>我爱你，时间。</p>
-<p>你虽残酷，却温柔，流光波影里，是你浅浅的泪痕和浅浅的笑意。你虽苦涩，却甘甜，用滴滴答答的琴弦，奏响了一首首如帆的生命。</p>
-<p>你是人们最矛盾的渴望，最刻骨的虔诚。你慷慨又吝啬，无论春夏，你从不带走一片云彩，却风卷残云般剥掉每一片光阴。你在世人的欢歌笑语里，你也在他们悔恨的眼泪里。你雕塑着历史，你挥逑着未来。</p>
-<p>你是世间最可人的女子，尚未踏出闺房一步，便芬芳四溢，带走了整个冬季。</p>
-<p>噢，时间，且慢些，且慢些。</p>
-<p>我不愿看到你拉扯着我的父母慢慢老去，将他们佝偻的背影暴露在时光里。我只愿一直做你梦里的那个小女孩，淡淡笑着，流连在一个叫做梦想的隧道里。</p>
-<p>噢，你且慢些，且慢些。</p>
-<p>别打搅了孩子们的成长，少年们的桀骜，青年们的马不停蹄，中年们如山眉头里的千钧一发，老人们在阳光下被拉得瘦瘦长长的影子。还有我沉睡多年的梦想，静谧无声的敲打出睡莲绽放时的轻声细语，不要打搅了它。</p>
-<p>且慢些，且慢些。</p>
-<p>让时光不要老去，我们不忍看见你的白头。</p>
-<p>给一切无能为力一个释然的理由；</p>
-<p>给一切刀光剑影一个云淡风轻的机会；</p>
-<p>给一切悲欢离合一个道歉的理由；</p>
-<p>给一切海誓山盟一个从头开始的机会。</p>
-<p>给你我一个机会，在时光里，画出一笔最美的永恒。</p>
-<p>给你我一个机会，在曼妙时光里，用爱的絮语，量出你嘴唇的温度。</p>
-<p>end</p>
+        <p>在 Thinking in Java 看到这样一段话：</p>
+<p>Primitives that are fields in a class are automatically initialized to zero, as noted in the Everything Is an Object chapter. But the object references are initialized to null, and if you try to call methods for any of them, you’ll get an exception-a runtime error. Conveniently, you can still print a null reference without throwing an exception.</p>
+<p>大意是：原生类型会被自动初始化为 0，但是对象引用会被初始化为 null，如果你尝试调用该对象的方法，就会抛出空指针异常。通常，你可以打印一个 null 对象而不会抛出异常。</p>
+<p>第一句相信大家都会容易理解，这是类型初始化的基础知识，但是第二句就让我很疑惑：为什么打印一个 null 对象不会抛出异常？带着这个疑问，我开始了解惑之旅。下面我将详细阐述我解决这个问题的思路，并且深入 JDK 源码找到问题的答案。</p>
+<p>解决问题的过程</p>
+<p>可以发现，其实这个问题有几种情况，所以我们分类讨论各种情况，看最后能不能得到答案。</p>
+<p>首先，我们把这个问题分解为三个小问题，逐一解决。</p>
+<p>第一个问题</p>
+<p>直接打印 null 的 String 对象，会得到什么结果？</p>
+<p>String s = null;<br>System.out.print(s);</p>
+<p>运行的结果是</p>
+<p>null</p>
+<p>果然如书上说的没有抛出异常，而是打印了null。显然问题的线索在于print函数的源码中。我们找到print的源码：</p>
+<p>public void print(String s) {<br>    if (s == null) {<br>        s = “null”;<br>    }<br>    write(s);<br>}</p>
+<p>看到源码才发现原来就只是加了一句判断而已，简单粗暴，可能你对 JDK 的简单实现有点失望了。放心，第一个问题只是开胃菜而已，大餐还在后面。</p>
+<p>第二个问题</p>
+<p>打印一个 null 的非 String 对象，例如说 Integer：</p>
+<p>Integer i = null;<br>System.out.print(i);</p>
+<p>运行的结果不出意料：</p>
+<p>null</p>
+<p>我们再去看看print的源码：</p>
+<p>public void print(Object obj) {<br>    write(String.valueOf(obj));<br>}</p>
+<p>有点不一样的了，看来秘密藏在valueOf里面。</p>
+<p>public static String valueOf(Object obj) {<br>    return (obj == null) ? “null” : obj.toString();<br>}</p>
+<p>看到这里，我们终于发现了打印 null 对象不会抛出异常的秘密。print方法对 String 对象和非 String 对象分开进行处理。</p>
+<p>String 对象：直接判断是否为 null，如果为 null 给 null 对象赋值为”null”。</p>
+<p>非 String 对象：通过调用String.valueOf方法，如果是 null 对象，就返回”null”，否则调用对象的toString方法。</p>
+<p>通过上面的处理，可以保证打印 null 对象不会出错。</p>
+<p>到这里，本文就应该结束了。<br>什么？说好的大餐呢？上面还不够塞牙缝呢。<br>开玩笑啦。下面我们来探讨第三个问题。</p>
+<p>第三个问题（隐藏的大餐）</p>
+<p>null 对象与字符串拼接会得到什么结果？</p>
+<p>String s = null;<br>s = s + “!”;<br>System.out.print(s);’</p>
+<p>结果可能你也猜到了：</p>
+<p>null!</p>
+<p>为什么呢？跟踪代码运行可以发现，这回跟print没有什么关系。但是上面的代码就调用了print函数，不是它会是谁呢？+的嫌疑最大，但是+又不是函数，我们怎么看到它的源代码？这种情况，唯一的解释就是编译器动了手脚，天网恢恢，疏而不漏，找不到源代码，我们可以去看看编译器生成的字节码。</p>
+<p>L0<br> LINENUMBER 27 L0<br> ACONST_NULL<br> ASTORE 1<br>L1<br> LINENUMBER 28 L1<br> NEW java/lang/StringBuilder<br> DUP<br> INVOKESPECIAL java/lang/StringBuilder.<init> ()V<br> ALOAD 1<br> INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;<br> LDC “!”<br> INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;<br> INVOKEVIRTUAL java/lang/StringBuilder.toString ()Ljava/lang/String;<br> ASTORE 1<br>L2<br> LINENUMBER 29 L2<br> GETSTATIC java/lang/System.out : Ljava/io/PrintStream;<br> ALOAD 1<br> INVOKEVIRTUAL java/io/PrintStream.print (Ljava/lang/String;)V</init></p>
+<p>看了上面的字节码是不是一头雾水？这里我们就要扯开话题，来侃侃+字符串拼接的原理了。</p>
+<p>编译器对字符串相加会进行优化，首先实例化一个StringBuilder，然后把相加的字符串按顺序append，最后调用toString返回一个String对象。不信你们看看上面的字节码是不是出现了StringBuilder。详细的解释参考这篇文章 Java细节：字符串的拼接。</p>
+<p>String s = “a” + “b”;<br>//等价于<br>StringBuilder sb = new StringBuilder();<br>sb.append(“a”);<br>sb.append(“b”);<br>String s = sb.toString();</p>
+<p>再回到我们的问题，现在我们知道秘密在StringBuilder.append函数的源码中。</p>
+<p>//针对 String 对象<br>public AbstractStringBuilder append(String str) {<br>    if (str == null)<br>        return appendNull();<br>    int len = str.length();<br>    ensureCapacityInternal(count + len);<br>    str.getChars(0, len, value, count);<br>    count += len;<br>    return this;<br>}<br>//针对非 String 对象<br>public AbstractStringBuilder append(Object obj) {<br>    return append(String.valueOf(obj));<br>}</p>
+<p>private AbstractStringBuilder appendNull() {<br>    int c = count;<br>    ensureCapacityInternal(c + 4);<br>    final char[] value = this.value;<br>    value[c++] = ‘n’;<br>    value[c++] = ‘u’;<br>    value[c++] = ‘l’;<br>    value[c++] = ‘l’;<br>    count = c;<br>    return this;<br>}</p>
+<p>现在我们恍然大悟，append函数如果判断对象为 null，就会调用appendNull，填充”null”。</p>
 
       
     </div>
@@ -242,7 +260,7 @@ var a = new Donate({
           </li>
           <li class="post-copyright-link">
           <strong>Post link:  </strong>
-          <a href="/2018/12/23/你的名称/" target="_blank" title="你的名称">https://Mrxutao.github.io/2018/12/23/你的名称/</a>
+          <a href="/2018/12/24/java中关于null对象容错处理/" target="_blank" title="java中关于null对象容错处理">https://Mrxutao.github.io/2018/12/24/java中关于null对象容错处理/</a>
           </li>
           <li class="post-copyright-license">
             <strong>Copyright Notice:   </strong>
@@ -288,19 +306,10 @@ var a = new Donate({
     
 <nav id="article-nav">
   
-    <a href="/2018/12/24/java中关于null对象容错处理/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          java中关于null对象容错处理
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/12/23/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/12/23/你的名称/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">你的名称</div>
     </a>
   
 </nav>
